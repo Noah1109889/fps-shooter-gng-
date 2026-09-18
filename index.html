@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0f14" />
+  <title>Breach Protocol // Tactical Operations</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="menu" class="screen">
+      <div class="brand"><span class="mark">◆</span><div><b>BREACH PROTOCOL</b><small>TACTICAL OPERATIONS // SIMULATION 0.8</small></div></div>
+      <div class="menu-grid">
+        <div class="briefing panel"><p class="eyebrow">OPERATION // NIGHTFALL</p><h1>CONTROL THE<br><em>ENTRY.</em></h1><p class="muted">A close-quarters tactical sandbox. Select a specialist, read the floor plan, and clear the hostile team before the clock expires.</p><div class="stats"><span><b>05:00</b> ROUND TIME</span><span><b>1–4</b> OPERATORS</span><span><b>01</b> OBJECTIVE</span></div></div>
+        <div class="operator-panel panel"><div class="panel-title">SELECT SPECIALIST <span>01 / 04</span></div><div id="operator-list"></div><button id="deploy" class="primary">DEPLOY TO NIGHTFALL <span>→</span></button></div>
+      </div>
+      <p class="legal">ORIGINAL PROTOTYPE · NO THIRD-PARTY GAME ASSETS · ALL OPERATORS AND SYSTEMS ARE FICTIONAL</p>
+    </section>
+    <section id="game" class="hidden"><canvas id="arena"></canvas><div class="hud-top"><div class="brand mini"><span class="mark">◆</span><b>BP // NIGHTFALL</b></div><div class="objective"><small>OBJECTIVE</small><b>SECURE THE DATA VAULT</b><i id="objective-bar"></i></div><div class="round-clock" id="clock">05:00</div></div><div class="hud-bottom"><div class="health"><span>VITALS</span><b id="health-value">100</b><i><em id="health-bar"></em></i></div><div class="weapon"><b id="weapon-name">VANGUARD 5.56</b><span id="ammo">30 / 180</span><small id="weapon-status">READY</small></div><div class="gadget"><span>GADGET [SPACE]</span><b id="gadget-name">BREACH CHARGE</b><i id="charges">● ●</i></div></div><div id="toast"></div><div id="pause" class="overlay hidden"><h2>ROUND PAUSED</h2><button id="resume" class="primary">RESUME</button><button id="return-menu" class="secondary">RETURN TO BRIEFING</button></div><div id="result" class="overlay hidden"><p class="eyebrow">OPERATION COMPLETE</p><h2 id="result-title">VAULT SECURED</h2><p id="result-copy"></p><button id="again" class="primary">RUN IT AGAIN</button></div></section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
